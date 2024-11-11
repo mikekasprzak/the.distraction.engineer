@@ -1,0 +1,4 @@
+baseURL = 'https://distraction.engineer/'
+languageCode = 'en-us'
+title = 'distraction.engineer'
+theme = 'distraction'
