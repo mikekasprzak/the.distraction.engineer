@@ -1,4 +1,10 @@
 baseURL = 'https://distraction.engineer/'
 languageCode = 'en-us'
-title = 'distraction.engineer'
 theme = 'distraction'
+
+title = 'the.Distraction.Engineer'
+params.description = 'a notebook and blog by Mike Kasprzak'
+copyright = 'Mike Kasprzak'
+
+enableEmoji = true
+enableRobotsTXT = true

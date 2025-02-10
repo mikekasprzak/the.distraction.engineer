@@ -1,0 +1,60 @@
+body {
+    color: #222;
+    font-family: "Newsreader", serif;
+
+    max-width: 1200px;
+    margin: auto;
+    font-size: 18px;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+header {
+    margin-bottom: 2rem;
+
+    h1 {
+        font-family: "Kode Mono", monospace;
+        margin-bottom: 0;
+    }
+
+    nav {
+        float: right;
+    }
+}
+
+footer {
+    border-top: 1px solid #222;
+    margin-top: 1rem;
+}
+
+main {
+    line-height: 1.65;
+    text-align: justify;
+
+    p,
+    h1, h2, h3, h4 {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1, h2 {
+        font-family: "Fredericka the Great", serif;
+    }
+
+    code {
+        font-family: "Source Code Pro", monospace;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    a {
+        color: #00e;
+        text-decoration: none;
+    }
+}
+

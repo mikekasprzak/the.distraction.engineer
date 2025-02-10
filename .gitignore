@@ -1,5 +1,7 @@
 # lock
 *.lock
 
+.woff2
+
 # Hugo
 public/
