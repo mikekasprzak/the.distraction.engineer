@@ -2,7 +2,7 @@
 title = "Simple Vegetable Soup"
 date = "2024-05-20T21:54:33.688Z"
 
-tags = [ "recipe", "dairy-free", "gluten-free", "soup", "vegetarian" ]
+tags = [ "dairy-free", "gluten-free", "soup", "vegetarian" ]
 +++
 This is a simple soup inspired by my mother's recipe.
 
@@ -12,6 +12,7 @@ This is a simple soup inspired by my mother's recipe.
 * stock pot (or other large pot)
 * stove-top
 * large spoon or silicone spatula
+
 
 ## Ingredients
 
@@ -47,10 +48,11 @@ A chunky mirepoix.
 * salt (to season vegetables while sauteing)
 * a liquid, such as white wine, vodka, or water (for deglazing)
 
+
 ## Instructions
 
 1. Add oil to pot, and set heat to medium-high.
-   > You can test if the pot is hot enough by dropping a single vegetable into the pot. If it sizzles, it's ready
+   * You can test if the pot is hot enough by dropping a single vegetable into the pot. If it sizzles, it's ready
 2. Add onions, a bit of salt, and saute them for a few minutes
 3. Deglaze the pot by adding a small glug of liquid to an exposed dark spot on the pan and stirring the onions over it. The onions will pick up a light caramel color as you do this.
 4. Add the remaining vegetables and saute for a few more minutes.
@@ -62,6 +64,6 @@ A chunky mirepoix.
 
 1. Prepare the soup as before with potato but use half the recommended amount of potato
 2. Turn off heat, and let it cool.
-  * It doesn't need to be room temperature, but cool enough that you're comfortable pouring, and it wont overheat your blender.
+   * It doesn't need to be room temperature, but cool enough that you're comfortable pouring, and it wont overheat your blender.
 3. Pour soup into blender, and blend.
 
