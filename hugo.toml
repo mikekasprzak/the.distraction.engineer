@@ -1,10 +1,8 @@
-baseURL = 'https://distraction.engineer/'
-languageCode = 'en-us'
+baseURL = 'https://the.distraction.engineer/'
 theme = 'distraction'
 
 title = 'the.Distraction.Engineer'
-params.description = 'a notebook and blog by Mike Kasprzak'
 copyright = 'Mike Kasprzak'
+params.description = 'a notebook and blog by Mike Kasprzak'
 
-enableEmoji = true
-enableRobotsTXT = true
+# see themes/distraction/hugo.toml for theme configuration
