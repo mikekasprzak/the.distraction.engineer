@@ -14,13 +14,45 @@ h1, h2, h3 {
 header {
     margin-bottom: 2rem;
 
-    h1 {
-        font-family: "Kode Mono", monospace;
-        margin-bottom: 0;
-    }
-
     nav {
-        float: right;
+        margin-top: 1rem;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                font-weight: 600;
+            }
+        }
+
+        > div {
+            display: inline-block;
+            height: 4rem;
+            &.-right {
+                float: right;
+                line-height: 4rem;
+            }
+
+
+            /* LOGO */
+            .title {
+                font-family: "Kode Mono", monospace;
+                font-size: 1.75rem;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .subtext {
+                font-size: 0.75rem;
+            }
+
+            .button {
+                display: inline-block; /* collapse whitespace */
+                font-family: "Fredericka the Great", serif;
+                font-size: 1.25rem;
+                margin: 0 1rem 0;
+            }
+        }
     }
 }
 

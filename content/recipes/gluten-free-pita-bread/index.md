@@ -1,9 +1,9 @@
 +++
 title = "Gluten-free pita bread"
-date = "2024-04-30T22:02:01.554Z"
+date = "2025-02-10T15:44:51.062Z"
 updated = "2024-05-20T04:19:06.305Z"
-
 tags = [ "bread", "wrap", "gluten-free", "dairy-free", "vegetarian" ]
+preview = "/content/recipes/gluten-free-pita-bread/dummy-pita.jpg"
 +++
 I struggled to find gluten-free pita breads in store, so I made some. I also made mine dairy-free.
 

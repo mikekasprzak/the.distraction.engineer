@@ -1,2 +1,6 @@
 {
+    "[markdown]": {
+    },
+    "frontMatter.content.publicFolder": "static",
+    "frontMatter.preview.pathName": "{{pathToken.relPath}}"
 }

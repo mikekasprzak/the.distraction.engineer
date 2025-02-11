@@ -1,8 +1,11 @@
 <nav>
-    <h2>Words</h2>
+    <div class="-left">
+        <a href="/">
+            <div class="title">{{ site.Title }}</div>
+            <div class="subtext">{{ site.Params.Description }}</div>
+        </a>
+    </div>
+    <div class="-right">
+        <a class="button" href="/words/">Words</a><a class="button" href="/works/">Works</a><a class="button" href="/recipes/">Recipes</a>
+    </div>
 </nav>
-<aside>
-    <h1>{{ site.Title }}</h1>
-    <sub>{{ site.Params.Description }}</sub>
-    <!--{{ partial "menu.html" (dict "menuID" "main" "page" .) }}-->
-</aside>
