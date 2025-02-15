@@ -1,9 +1,9 @@
 {{- if .IsBlock -}}
   <figure>
-    <img src="{{ .Page.Path }}/{{ .Destination | safeURL }}" moo
+    <img src="{{ .PageInner.Path }}/{{ .Destination | safeURL }}" moo
       {{- with .PlainText }} alt="{{ . }}"{{ end -}}
     >
-    {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+    {{- with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end -}}
   </figure>
 {{- else -}}
   <img src="{{ .Page.Path }}/{{ .Destination | safeURL }}" cow

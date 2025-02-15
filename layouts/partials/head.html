@@ -10,4 +10,7 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+{{- with resources.Get "syntax.css" -}}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end -}}
 <link rel="stylesheet" href="/fonts.css">

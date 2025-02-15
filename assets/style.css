@@ -1,10 +1,20 @@
+:root {
+    --root-color: #f8f8f8;
+
+    --text-color: #222;
+    --link-color: #24C;
+    --active-link-color: #35F;
+    --back-shadow: #0001;
+}
+
 body {
-    color: #222;
+    color: var(--text-color);
+    background: var(--root-color);
     font-family: "Newsreader", serif;
 
+    font-size: 18px;
     max-width: 1200px;
     margin: auto;
-    font-size: 18px;
 
     /*
     background-image: url(/words/2025/floor-plan.jpg);
@@ -14,130 +24,178 @@ body {
     */
 }
 
+/* Reset */
 h1, h2, h3 {
-    font-weight: 400;
+    font-weight: normal;
+}
+a {
+    color: inherit; /* i.e. none */
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
 }
 
-header {
+/* Page Header */
+header > nav {
+    margin-top: 1rem;
     margin-bottom: 2rem;
 
-    nav {
-        margin-top: 1rem;
+    > div {
+        display: inline-block;
+    }
+
+    > div.-left {
+        padding: 1rem 3rem 1rem 1rem;
+
+        background: var(--back-shadow);
+        border-left: 3px black solid;
+
+        .title {
+            font-family: "Kode Mono", monospace;
+            font-size: 1.75rem;
+
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .subtext {
+            font-size: 0.75rem;
+        }
+
+    }
+
+    > div.-right {
+        float: right;
+        line-height: 3rem;
+        /*border-right: 2px black solid;*/
+        padding: 1rem;
 
         a {
-            text-decoration: none;
-            color: inherit;
+            display: inline-block; /* collapse whitespace */
+            font-family: "Fredericka the Great", serif;
+            font-size: 1.5rem;
+
+            margin: 0 1rem 0;
 
             &:hover {
                 transform: scale(1.2);
-            }
-        }
-
-        > div {
-            display: inline-block;
-
-            &.-left {
-                border-left: 3px black solid;
-                background: rgba(0,0,0,0.1);
-                padding: 1rem 3rem 1rem 1rem;
-            }
-
-            &.-right {
-                float: right;
-                line-height: 3rem;
-                /*border-right: 2px black solid;*/
-                padding: 1rem;
-            }
-
-
-            /* LOGO */
-            .title {
-                font-family: "Kode Mono", monospace;
-                font-size: 1.75rem;
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-            .subtext {
-                font-size: 0.75rem;
-            }
-
-            .button {
-                display: inline-block; /* collapse whitespace */
-                font-family: "Fredericka the Great", serif;
-                font-size: 1.5rem;
-                margin: 0 1rem 0;
             }
         }
     }
 }
 
 footer {
-    border-top: 1px solid #222;
+    border-top: 1px solid var(--text-color);
     margin-top: 1rem;
 }
 
 main {
-    line-height: 1.75;
-    text-align: justify;
     font-size: 1.35rem;
-
-    
-
-    time {
-        font-variant: small-caps;
-        letter-spacing: 0.125em;
-        font-weight: 325;
-    }
-
-    article > * {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    article > p > img:first-child {
-        display: block;
-        margin: auto;
-    }
-
-    h1 {
-        text-align: center;
-        font-size: 3rem;
-        max-width: 60%;
-        margin: 0 auto 4rem;
-        line-height: 1.35;
-
-        text-shadow: white 0 2px 2px;
-    }
-
-    img {
-        max-width: 100%;
-    }
-
-    p,
-    h2, h3, h4,
-    ul, ol {
-        max-width: 80%;
-
-        &:has(img) {
-            max-width: 100%;
-        }
-    }
 
     h1, h2, h3 {
         font-family: "Fredericka the Great", serif;
     }
 
-    code {
+    .code-block,
+    .code-inline {
         font-family: "Source Code Pro", monospace;
     }
 
-    strong {
-        font-weight: 700;
+    time {
+        font-variant: small-caps;
+        letter-spacing: 0.125rem;
+        font-weight: 325;
     }
+
+    article {
+        text-align: justify;
+
+        > * {
+            margin-left: auto;
+            margin-right: auto;
+
+            max-width: 100%;
+        }
+
+        p,
+        h2, h3, h4,
+        ul, ol {
+            max-width: 80%;
+        }
+
+        h1 {
+            max-width: 60%;
+            margin: 0 auto 4rem;
+            text-align: center;
+
+            font-size: 3rem;
+            line-height: 1.35;
+
+            text-shadow: white 0 2px 2px;
+        }
+
+        p {
+            line-height: 1.75;
+        }
+
+        .code-block {
+            line-height: 1.5;
+            font-size: 1rem;
+            padding: 1rem;
+            border-radius: 0.25rem;
+
+            .type {
+                float: right;
+                font-size: 60%;
+                color: var(--h-kw);
+            }
+        }
+
+        figure {
+            display: table; /* a block that fits its children, while still blocking */
+
+            padding: 0.5rem 2rem;
+            margin: 3rem auto;
+
+            background: var(--back-shadow);
+
+            & > img {
+                display: block;
+            }
+
+            & > figcaption {
+                display: table-caption; /* matches the width of the table */
+                caption-side: bottom; /* which edge to align it to */
+                text-align: center;
+
+                font-size: 85%;
+
+                padding-top: 0;
+                padding: 0.5rem;
+
+                background: var(--back-shadow);
+            }
+        }
+
+        /* Inline code blocks */
+        p > code {
+            padding: 0.25rem;
+            white-space: pre;
+
+            background: var(--back-shadow);
+        }
+    }
+
+
 
     a {
-        color: #00e;
-        text-decoration: none;
+        color: var(--link-color);
+
+        &:hover {
+            text-decoration: underline;
+
+            color: var(--active-link-color);
+            text-shadow: 0 0 3px rgba(from var(--link-color) r g b / 0.5);
+        }
     }
 }
-

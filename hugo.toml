@@ -13,3 +13,7 @@ enableRobotsTXT = true
 parser.attribute.block = true
 # Disable wrapping of standalone images in <p> tags
 parser.wrapStandAloneImageWithinParagraph = false
+
+[markup.highlight]
+# Enable (yes enable) classes for syntax highlighting
+noClasses = false

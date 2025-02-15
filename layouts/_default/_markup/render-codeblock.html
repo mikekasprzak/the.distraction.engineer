@@ -1,0 +1,2 @@
+{{ $result := transform.HighlightCodeBlock . }}
+<pre class="code-block">{{- if .Type }}<div class="type">{{ .Type }}</div>{{ end -}}{{ $result.Inner }}</pre>

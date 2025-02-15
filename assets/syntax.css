@@ -1,0 +1,112 @@
+/* Generated using: hugo gen chromastyles --style=nordic */
+
+:root {
+    --h-bg: #242933; /* BG Color */
+    --h-tx: #bbc3d4; /* Text Color */
+    --h-ln: #5d616a; /* Line numbers */
+
+    --h-er: #c5727a; /* Errors & deleted */
+    --h-lt: #393e47; /* Highlighted line */
+
+    --h-kw: #d08770; /* Keywords */
+    --h-fn: #88c0d0; /* Function */
+    --h-at: #8fbcbb; /* Class, Label, Attribute, Properties */
+    --h-op: #5e81ac; /* Builtins, Tags, Operators */
+
+    --h-st: #a3be8c; /* String Literals */
+    --h-nm: #b48ead; /* Number Literals */
+    --h-rm: #4c566a; /* Comments and documentation */
+    --h-es: #ebcb8b; /* Regex and escaping */
+    --h-sy: #eceff4; /* Punctuation */
+    --h-cmd: #1e222a; /* Prompts */
+}
+
+/* PreWrapper */ .code-block { color:var(--h-tx);background-color:var(--h-bg); }
+
+.code-block,
+.code-inline {
+/* Other */ .x {  }
+/* Error */ .err { color:var(--h-er) }
+/* CodeLine */ .cl {  }
+/* LineLink */ .lnlinks { outline:none;text-decoration:none;color:inherit }
+/* LineTableTD */ .lntd { vertical-align:top;padding:0;margin:0;border:0; }
+/* LineTable */ .lntable { border-spacing:0;padding:0;margin:0;border:0; }
+/* LineHighlight */ .hl { background-color:var(--h-lt) }
+/* LineNumbersTable */ .lnt { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:var(--h-ln) }
+/* LineNumbers */ .ln { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:var(--h-ln) }
+/* Line */ .line { display:flex; }
+/* Keyword */ .k { color:var(--h-kw);font-weight:bold }
+/* KeywordConstant */ .kc { color:var(--h-kw);font-weight:bold }
+/* KeywordDeclaration */ .kd { color:var(--h-kw);font-weight:bold }
+/* KeywordNamespace */ .kn { color:var(--h-kw);font-weight:bold }
+/* KeywordPseudo */ .kp { color:var(--h-kw) }
+/* KeywordReserved */ .kr { color:var(--h-kw);font-weight:bold }
+/* KeywordType */ .kt { color:var(--h-kw) }
+/* Name */ .n {  }
+/* NameAttribute */ .na { color:var(--h-at) }
+/* NameBuiltin */ .nb { color:var(--h-op) }
+/* NameBuiltinPseudo */ .bp {  }
+/* NameClass */ .nc { color:var(--h-at) }
+/* NameConstant */ .no { color:var(--h-at) }
+/* NameDecorator */ .nd { color:var(--h-kw) }
+/* NameEntity */ .ni { color:var(--h-kw) }
+/* NameException */ .ne { color:var(--h-er) }
+/* NameFunction */ .nf { color:var(--h-fn) }
+/* NameFunctionMagic */ .fm {  }
+/* NameLabel */ .nl { color:var(--h-at) }
+/* NameNamespace */ .nn { color:var(--h-at) }
+/* NameOther */ .nx {  }
+/* NameProperty */ .py { color:var(--h-at) }
+/* NameTag */ .nt { color:var(--h-op) }
+/* NameVariable */ .nv {  }
+/* NameVariableClass */ .vc {  }
+/* NameVariableGlobal */ .vg {  }
+/* NameVariableInstance */ .vi {  }
+/* NameVariableMagic */ .vm {  }
+/* Literal */ .l {  }
+/* LiteralDate */ .ld {  }
+/* LiteralString */ .s { color:var(--h-st) }
+/* LiteralStringAffix */ .sa { color:var(--h-st) }
+/* LiteralStringBacktick */ .sb { color:var(--h-st) }
+/* LiteralStringChar */ .sc { color:var(--h-st) }
+/* LiteralStringDelimiter */ .dl { color:var(--h-st) }
+/* LiteralStringDoc */ .sd { color:var(--h-rm) }
+/* LiteralStringDouble */ .s2 { color:var(--h-st) }
+/* LiteralStringEscape */ .se { color:var(--h-es) }
+/* LiteralStringHeredoc */ .sh { color:var(--h-st) }
+/* LiteralStringInterpol */ .si { color:var(--h-st) }
+/* LiteralStringOther */ .sx { color:var(--h-st) }
+/* LiteralStringRegex */ .sr { color:var(--h-es) }
+/* LiteralStringSingle */ .s1 { color:var(--h-st) }
+/* LiteralStringSymbol */ .ss { color:var(--h-st) }
+/* LiteralNumber */ .m { color:var(--h-nm) }
+/* LiteralNumberBin */ .mb { color:var(--h-nm) }
+/* LiteralNumberFloat */ .mf { color:var(--h-nm) }
+/* LiteralNumberHex */ .mh { color:var(--h-nm) }
+/* LiteralNumberInteger */ .mi { color:var(--h-nm) }
+/* LiteralNumberIntegerLong */ .il { color:var(--h-nm) }
+/* LiteralNumberOct */ .mo { color:var(--h-nm) }
+/* Operator */ .o { color:var(--h-op) }
+/* OperatorWord */ .ow { color:var(--h-op);font-weight:bold }
+/* Punctuation */ .p { color:var(--h-sy) }
+/* Comment */ .c { color:var(--h-rm);font-style:italic }
+/* CommentHashbang */ .ch { color:var(--h-rm);font-style:italic }
+/* CommentMultiline */ .cm { color:var(--h-rm);font-style:italic }
+/* CommentSingle */ .c1 { color:var(--h-rm);font-style:italic }
+/* CommentSpecial */ .cs { color:var(--h-rm);font-style:italic }
+/* CommentPreproc */ .cp { color:var(--h-op);font-style:italic }
+/* CommentPreprocFile */ .cpf { color:var(--h-op);font-style:italic }
+/* Generic */ .g {  }
+/* GenericDeleted */ .gd { color:var(--h-er) }
+/* GenericEmph */ .ge { font-style:italic }
+/* GenericError */ .gr { color:var(--h-er) }
+/* GenericHeading */ .gh { color:var(--h-fn);font-weight:bold }
+/* GenericInserted */ .gi { color:var(--h-st) }
+/* GenericOutput */ .go {  }
+/* GenericPrompt */ .gp { color:var(--h-cmd);font-weight:bold }
+/* GenericStrong */ .gs { font-weight:bold }
+/* GenericSubheading */ .gu { color:var(--h-fn);font-weight:bold }
+/* GenericTraceback */ .gt { color:var(--h-er) }
+/* GenericUnderline */ .gl {  }
+/* TextWhitespace */ .w {  }
+}
