@@ -1,11 +1,12 @@
 baseURL = 'https://the.distraction.engineer/'
-theme = 'distraction'
+languageCode = 'en-us'
 
 title = 'the.Distraction.Engineer'
 copyright = 'Mike Kasprzak'
 params.description = 'a notebook and blog by Mike Kasprzak'
 
-# see themes/distraction/hugo.toml for theme configuration
+enableEmoji = true
+enableRobotsTXT = true
 
 [markup.goldmark]
 # Enable markdown {attributes} feature on block elements
