@@ -2,5 +2,7 @@
     "[markdown]": {
     },
     "frontMatter.content.publicFolder": "static",
-    "frontMatter.preview.pathName": "{{pathToken.relPath}}"
+    "frontMatter.preview.pathName": "{{pathToken.relPath}}",
+    "workbench.editor.labelFormat": "short",
+    "explorer.excludeGitIgnore": true
 }

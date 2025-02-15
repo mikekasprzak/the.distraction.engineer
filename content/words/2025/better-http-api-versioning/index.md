@@ -16,20 +16,20 @@ Inspired by Anthony Fu's [Epoch Semantic Versioning](https://antfu.me/posts/epoc
 
 ![Pride Version. Bump MAJOR when you are proud of the release, MINOR for ordinary releases, and PATCH for shameful releases](pridever.png "Cool https://pridever.org")
 
-An [Application Programming Interface](https://en.wikipedia.org/wiki/API) (API) is how our software can use other software. If the API was to change, it's possible our software may stop working. 
+An [Application Programming Interface](https://en.wikipedia.org/wiki/API) (API) is how our software can use other software. If the API was to change, it's possible our software may stop working.
 
-The [Semantic Versioning 2.0.0 specification](https://semver.org/) provides some excellent guidance. 
+The [Semantic Versioning 2.0.0 specification](https://semver.org/) provides some excellent guidance.
 
 
 ## VX Versioning
 
-VX versioning has one rule: 
+VX versioning has one rule:
 
 > If an API may break, use an `x`.
 
 That's it.
 
-VX is an abreviation for "Version eXperimental". It's something I started doing back in 2016 
+VX is an abreviation for "Version eXperimental". It's something I started doing back in 2016
 
 
 ```html
