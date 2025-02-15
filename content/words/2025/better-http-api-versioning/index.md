@@ -34,5 +34,5 @@ VX is an abreviation for "Version eXperimental". It's something I started doing 
 
 ```html
 api.twitch.tv/kraken/...
-api.twitch.tv/helix/... - no guarentee 
+api.twitch.tv/helix/... - no guarentee ?
 ```

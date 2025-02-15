@@ -4,5 +4,7 @@
     "frontMatter.content.publicFolder": "static",
     "frontMatter.preview.pathName": "{{pathToken.relPath}}",
     "workbench.editor.labelFormat": "short",
-    "explorer.excludeGitIgnore": true
+    "explorer.excludeGitIgnore": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true
 }
