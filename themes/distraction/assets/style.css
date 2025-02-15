@@ -94,6 +94,11 @@ main {
         margin-right: auto;
     }
 
+    article > p > img:first-child {
+        display: block;
+        margin: auto;
+    }
+
     h1 {
         text-align: center;
         font-size: 3rem;

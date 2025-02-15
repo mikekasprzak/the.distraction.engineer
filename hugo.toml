@@ -6,3 +6,9 @@ copyright = 'Mike Kasprzak'
 params.description = 'a notebook and blog by Mike Kasprzak'
 
 # see themes/distraction/hugo.toml for theme configuration
+
+[markup.goldmark]
+# Enable markdown {attributes} feature on block elements
+parser.attribute.block = true
+# Disable wrapping of standalone images in <p> tags
+parser.wrapStandAloneImageWithinParagraph = false
