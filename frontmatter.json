@@ -52,6 +52,11 @@
           "title": "updated",
           "name": "updated",
           "type": "datetime"
+        },
+        {
+          "title": "summary",
+          "name": "summary",
+          "type": "string"
         }
       ]
     }

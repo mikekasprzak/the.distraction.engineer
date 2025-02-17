@@ -1,6 +1,7 @@
 +++
 title = "Better HTTP API versioning with VX Versioning"
 date = "2025-02-13T18:13:00.308Z"
+summary = "hey I'm cool"
 +++
 
 Summary?
@@ -23,7 +24,7 @@ The [Semantic Versioning 2.0.0 specification](https://semver.org/) provides some
 An [Application Programming Interface](https://en.wikipedia.org/wiki/API) (API) is how our software can use other software. If the API was to change, it's possible our software may stop working.
 
 
-### The social contract of the {MAJOR} version
+### The social contract of MAJOR versions
 
 e
 

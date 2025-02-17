@@ -1,6 +1,6 @@
 /* Generated using: hugo gen chromastyles --style=nordic */
 
-:root {
+:root.nordic {
     --h-bg: #242933; /* BG Color */
     --h-tx: #bbc3d4; /* Text Color */
     --h-ln: #5d616a; /* Line numbers */
@@ -20,6 +20,29 @@
     --h-sy: #eceff4; /* Punctuation */
     --h-cmd: #1e222a; /* Prompts */
 }
+
+:root {
+    --h-bg: #e1e2e7; /* BG Color */
+    --h-tx: #3760bf; /* Text Color */
+    --h-ln: #9854f1; /* Line numbers */
+
+    --h-er: #c64343; /* Errors & deleted */
+    --h-lt: #a1a6c5; /* Highlighted line */
+
+    --h-kw: #9854f1; /* Keywords */
+    --h-fn: #2e7de9; /* Function */
+    --h-at: #b15c00; /* Class, Label, Attribute, Properties */
+    --h-op: #8c6c3e; /* Builtins, Tags, Operators */
+
+    --h-st: #587539; /* String Literals */
+    --h-nm: #8c6c3e; /* Number Literals */
+    --h-rm: #a1a6c5; /* Comments and documentation */
+    --h-es: #2e7de9; /* Regex and escaping */
+    --h-sy: #1e222a; /* Punctuation */
+    --h-cmd: #1e222a; /* Prompts */
+}
+
+
 
 /* PreWrapper */ .code-block { color:var(--h-tx);background-color:var(--h-bg); }
 

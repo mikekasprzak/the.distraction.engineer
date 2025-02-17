@@ -2,6 +2,7 @@
     --root-color: #f8f8f8;
 
     --text-color: #222;
+    --bq-text: #444;
     --link-color: #24C;
     --active-link-color: #35F;
     --back-shadow: #0001;
@@ -108,8 +109,6 @@ main {
     }
 
     article {
-        text-align: justify;
-
         > * {
             margin-left: auto;
             margin-right: auto;
@@ -117,13 +116,13 @@ main {
             max-width: 100%;
         }
 
-        p,
-        h2, h3, h4,
-        ul, ol {
+        > p,
+        > h2, > h3, > h4,
+        > ul, > ol {
             max-width: 80%;
         }
 
-        h1 {
+        > h1 {
             max-width: 60%;
             margin: 0 auto 4rem;
             text-align: center;
@@ -136,16 +135,22 @@ main {
 
         p {
             line-height: 1.75;
+            text-align: justify;
         }
 
         .code-block {
+            position: relative;
+
             line-height: 1.5;
             font-size: 1rem;
             padding: 1rem;
             border-radius: 0.25rem;
 
             .type {
-                float: right;
+                position: absolute;
+                right: 0.5rem;
+                top: 0.5rem;
+
                 font-size: 60%;
                 color: var(--h-kw);
             }
@@ -183,6 +188,18 @@ main {
             white-space: pre;
 
             background: var(--back-shadow);
+        }
+
+        blockquote {
+            max-width: 65%;
+            font-size: 90%;
+
+            color: var(--bq-text);
+            border-left: 0.25rem var(--bq-text) solid;
+            padding: 0.125rem 1rem;
+
+            background: var(--back-shadow);
+            border-radius: 0.25rem;
         }
     }
 
