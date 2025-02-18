@@ -25,6 +25,8 @@ categories = [ "compute", "gpu" ]
 | Volta      | Tesla V100       | PCIe 3.0 x16 | 32 GB HBM2    | YES    | 7.8    | 15.7\* | 15.7\* | 31.4  | -     | -     |
 | Volta      | CMP 100-210      | PCIe 1.0 x1  | 16 GB HBM2    | -      | ?      | ?      | ?      | ?     | -     | -     |
 | Pascal     | Tesla P100       | PCIe 3.0 x16 | 16 GB HBM2    | YES    | 4.5    | 8.7    | -      | 21.2  | -     | -     |
+| Battlemage | Intel Arc B580   | PCIe 4.0 x8  | 12 GB GDDR6   | -      | 1.71   | 13.7   | ?      | 27.3  | 27.3  | -     |
+| Alchemist  | Intel Arc A770   | PCIe 4.0 x16 | 16 GB GDDR6   | -      | 2.58   | 19.7   | ?      | 39.3  | 39.3  | -     |
 
 * Volta and Turing GPUs can execute FP32 and INT32 operations simultaneously
 * Ampere GPUs have dedicated FP32 cores and hybrid FP32/INT32 cores
@@ -32,18 +34,20 @@ categories = [ "compute", "gpu" ]
 
 ### Tensor Operation Througput (in TFLOPS/TOPS)
 
-| GENERATION | GPU              | FP8/FP4     | INT8/INT4    | FP16/BF16/FP8/FP4 +FP32 | FP16/FP8/FP4 +FP16 | +FP64 | NOTES         |
-| ---------- | ---------------- | ----------- | ------------ | ----------------------- | ------------------ | ----- | ------------- |
-| Blackwell  | Tesla B100       | (3500/7000) | (3500/-)     | 1980/1980/3500/7000     | 1980/3500/7000     | 30    | FP6, NO INT4  |
-| Blackwell  | GeForce RTX 50xx | (838/1676)  | (838/-)      | 210/210/419/1676        | 419/838/1676       | -     | NO INT4       |
-| Hopper     | Tesla H100       | (1979/-)    | (1979/-)     | 990/990/1979/-          | 990/1979/-         | 67    | NO INT4       |
-| Ada        | GeForce RTX 40xx | (660/-)     | (660/1321)   | 165/165/660/-           | 330/660/-          | -     |               |
-| Ampere     | Tesla A100       | -           | (624/1248)   | 312/312/-/-             | 624/-/-            | 19.5  | BINARY (INT1) |
-| Ampere     | GeForce RTX 30xx | -           | (320/640)    | 80/80/-/-               | 160/-/-            | -     | BINARY (INT1) |
-| Turing     | Titan RTX        | -           | (261/522)    | 130/-/-/-               | 130/-/-            | -     |               |
-| Turing     | GeForce RTX 20xx | -           | (228/455)    | 57/-/-/-                | 114/-/-            | -     |               |
-| Volta      | Tesla V100       | -           | (62)         | 125/-/-/-               | 125/-/-            | -     |               |
-| Pascal     | Tesla P100       | -           | -            | -                       | -                  | -     |               |
+| GENERATION | GPU              | FP8/FP4    | INT8/INT4  | FP16/BF16/FP8/FP4 +FP32 | FP16/FP8/FP4 +FP16 | +FP64 | NOTES         |
+| ---------- | ---------------- | ---------- | ---------- | ----------------------- | ------------------ | ----- | ------------- |
+| Blackwell  | Tesla B100       | 3500/7000  | 3500/-     | 1980/1980/3500/7000     | 1980/3500/7000     | 30    | FP6, NO INT4  |
+| Blackwell  | GeForce RTX 50xx | 838/1676   | 838/-      | 210/210/419/1676        | 419/838/1676       | -     | NO INT4       |
+| Hopper     | Tesla H100       | 1979/-     | 1979/-     | 990/990/1979/-          | 990/1979/-         | 67    | NO INT4       |
+| Ada        | GeForce RTX 40xx | 660/-      | 660/1321   | 165/165/660/-           | 330/660/-          | -     |               |
+| Ampere     | Tesla A100       | -          | 624/1248   | 312/312/-/-             | 624/-/-            | 19.5  | BINARY (INT1) |
+| Ampere     | GeForce RTX 30xx | -          | 320/640    | 80/80/-/-               | 160/-/-            | -     | BINARY (INT1) |
+| Turing     | Titan RTX        | -          | 261/522    | 130/-/-/-               | 130/-/-            | -     |               |
+| Turing     | GeForce RTX 20xx | -          | 228/455    | 57/-/-/-                | 114/-/-            | -     |               |
+| Volta      | Tesla V100       | -          | 62/-       | 125/-/-/-               | 125/-/-            | -     |               |
+| Pascal     | Tesla P100       | -          | -          | -                       | -                  | -     |               |
+| Battlemage | Intel Arc B580   | ?          | ?          | ?                       | ?                  | ?     |               |
+| Alchemist  | Intel Arc A770   | ?          | ?          | ?                       | ?                  | ?     |               |
 
 
 * Blackwell (50xx) Architecture: <https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf>

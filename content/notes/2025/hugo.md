@@ -3,8 +3,6 @@ title = "Hugo"
 date = "2025-02-17T14:39:27.996Z"
 +++
 
-
-
 ## Overview and History
 
 The first CMS I used for blogging was WordPress. I started blogging in 2005 at <https://toonormal.com>. Too Normal/TooNormal/TOONormal was a pun on [Too Human](https://en.wikipedia.org/wiki/Too_Human), an at-the-time AAA game that was stuck in development hell.
