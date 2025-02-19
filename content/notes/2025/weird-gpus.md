@@ -75,6 +75,7 @@ Consumer GPUs tend to have poor 64bit floating point performance. That said, CPU
 | NVidia P100 (Pascal) | PCIe 3.0 x16 | 16 GB HBM2         | 5.3   | -     | 250 W | \~$250                 | SXM/SXM2 available   |
 
 * The CMP 100-210 is a neutered V100. Testing is required but it may have working FP64 cores.
+  * Conflicting information in the comments. Only the non V100 bios tested: <https://www.reddit.com/r/LocalLLaMA/comments/1f6hjwf/battle_of_the_cheap_gpus_lllama_31_8b_gguf_vs/>
 * Some 16 GB v100 cards on eBay are listed as "neutered" 12 GB cards
 
 
@@ -105,6 +106,21 @@ Certain NVidia GPUs are also available as [SXM](https://en.wikipedia.org/wiki/SX
   * <https://www.reddit.com/r/LocalLLaMA/comments/1f6hjwf/battle_of_the_cheap_gpus_lllama_31_8b_gguf_vs/>
 * M4 Mac Pro
 *
+
+### AMD BC-250
+
+This may be the way to go:
+
+* 12 GB VRAM, 4 GB RAM, gigabit, 200 W power (peak)
+  * 2x nodes: 24 GB of effective VRAM, 400 W across 1x 500W PSU
+  * 4x nodes: 48 GB of effective VRAM, 800 W across 1x 1000 W PSU or 2x 500 W PSU
+  * 6x nodes: 72 GB of effective VRAM, 1200 W. Ideally you should run 3 clusters of 2x nodes on different breakers.
+
+Goal should be to make a single 2x node cluster. Custom 3D printed case with 500 W PSU, blower fans.
+
+* How to reconfig it with 4 GB RAM, 12 GB VRAM <https://www.reddit.com/r/LocalLLaMA/comments/1h8el9m/metallama318binstructq8_0gguf_2689_toks_for_20/>
+* Lowers the idle wattage <https://gitlab.com/TuxThePenguin0/oberon-governor>
+  * I forget where, but I think it was suggested somewhere that some of the current Linux Kernel work helped idle wattage more.
 
 
 ## Mining GPUs
