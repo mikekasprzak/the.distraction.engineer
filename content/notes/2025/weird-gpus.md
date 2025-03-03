@@ -104,6 +104,7 @@ Certain NVidia GPUs are also available as [SXM](https://en.wikipedia.org/wiki/SX
   * <https://www.phoronix.com/news/AMD-RADV-PS5-BC-250>
   * <https://www.techpowerup.com/forums/threads/omg.329796/>
   * <https://www.reddit.com/r/LocalLLaMA/comments/1f6hjwf/battle_of_the_cheap_gpus_lllama_31_8b_gguf_vs/>
+  * <https://github.com/mothenjoyer69/bc250-documentation>
 * M4 Mac Pro
 *
 
@@ -122,6 +123,24 @@ Goal should be to make a single 2x node cluster. Custom 3D printed case with 500
 * Lowers the idle wattage <https://gitlab.com/TuxThePenguin0/oberon-governor>
   * I forget where, but I think it was suggested somewhere that some of the current Linux Kernel work helped idle wattage more.
 
+#### Details
+
+<https://github.com/mothenjoyer69/bc250-documentation>
+
+> * Features an AMD BC250 APU, a cut-down variant of the APU in the PS5. It integrates 6x Zen 2 cores, at up to 3.49GHz (ish), as well as a 12CU RDNA2 iGPU.
+> * 1x M.2 2280 slot with support for NVMe (PCIe 2.0 x2) and SATA 3.
+> * 1x DisplayPort, 1x GbE Ethernet, 2x USB 2.0, 2x USB 3.0.
+> * 1x SPI header, 1x auto-start jumper, 1x clear CMOS jumper, 2x mystery headers.
+> * NCT6686 SuperIO chip.
+> * 220W TDP, so make sure you have a good quality power supply with 2x PCIe 8-pin connectors available and a plan for cooling it. You can, in a pinch, get away with directly placing two 120mm fans directly on top of the heatsink. If you are doing custom cooling, don't forget the memory!!! Its GDDR6 it runs really hot!!!!
+>
+> * 16GB GDDR6 shared between the GPU and CPU. By default, this will be set to either 8GB/8GB (CPU/GPU) or 4GB/12GB, depending on your firmware revision, and requires flashing modified firmware to change.
+
+Get Ubuntu Working: <https://github.com/chris2355/BC250-Proxmox->
+
+Odd patches: <https://github.com/mothenjoyer69/bc250-mesa>
+
+LTT Dump: <https://linustechtips.com/topic/1483719-amd-bc-250-mining-cardgpu/>
 
 ## Mining GPUs
 
