@@ -178,3 +178,75 @@ Miners were apparently able to work around the compute problems, and even squeez
 * [UCX](https://openucx.org/documentation/) an open communication framework, apparently
 * [building the linux kernel](https://phoenixnap.com/kb/build-linux-kernel)
 * <https://askubuntu.com/questions/1351911/what-does-regenerate-your-initramfs-mean>
+
+### UNSORTED
+
+Installing ROCr from sources
+
+```bash
+-- Install configuration: ""
+-- Installing: /opt/rocm/llvm/lib/libhsakmt.a
+-- Up-to-date: /opt/rocm/llvm/lib/libhsakmt.a
+-- Installing: /opt/rocm/llvm/include/hsakmt
+-- Installing: /opt/rocm/llvm/include/hsakmt/hsakmt.h
+-- Installing: /opt/rocm/llvm/include/hsakmt/hsakmttypes.h
+-- Installing: /opt/rocm/llvm/lib/cmake/hsakmt/hsakmtTargets.cmake
+-- Installing: /opt/rocm/llvm/lib/cmake/hsakmt/hsakmtTargets-noconfig.cmake
+-- Installing: /opt/rocm/llvm/lib/cmake/hsakmt/hsakmt-config.cmake
+-- Installing: /opt/rocm/llvm/lib/cmake/hsakmt/hsakmt-config-version.cmake
+-- Installing: /opt/rocm/llvm/lib/pkgconfig/libhsakmt.pc
+-- Installing: /opt/rocm/llvm/lib/libhsakmt-staticdrm.a
+-- Installing: /opt/rocm/llvm/lib/cmake/hsakmt/hsakmt-staticdrmTargets.cmake
+-- Installing: /opt/rocm/llvm/lib/cmake/hsakmt/hsakmt-staticdrmTargets-noconfig.cmake
+-- Installing: /opt/rocm/llvm/lib/libhsa-runtime64.a
+-- Up-to-date: /opt/rocm/llvm/lib/libhsa-runtime64.a
+-- Installing: /opt/rocm/llvm/share/doc/hsa-runtime64/LICENSE.md
+-- Installing: /opt/rocm/llvm/include/hsa
+-- Installing: /opt/rocm/llvm/include/hsa/hsa_ext_finalize.h
+-- Installing: /opt/rocm/llvm/include/hsa/hsa.h
+-- Installing: /opt/rocm/llvm/include/hsa/hsa_api_trace.h
+-- Installing: /opt/rocm/llvm/include/hsa/amd_hsa_elf.h
+-- Installing: /opt/rocm/llvm/include/hsa/hsa_ext_amd.h
+-- Installing: /opt/rocm/llvm/include/hsa/amd_hsa_kernel_code.h
+-- Installing: /opt/rocm/llvm/include/hsa/hsa_ven_amd_aqlprofile.h
+-- Installing: /opt/rocm/llvm/include/hsa/hsa_amd_tool.h
+-- Installing: /opt/rocm/llvm/include/hsa/hsa_ven_amd_pc_sampling.h
+-- Installing: /opt/rocm/llvm/include/hsa/hsa_ven_amd_loader.h
+-- Installing: /opt/rocm/llvm/include/hsa/amd_hsa_signal.h
+-- Installing: /opt/rocm/llvm/include/hsa/hsa_api_trace_version.h
+-- Installing: /opt/rocm/llvm/include/hsa/Brig.h
+-- Installing: /opt/rocm/llvm/include/hsa/amd_hsa_common.h
+-- Installing: /opt/rocm/llvm/include/hsa/hsa_ext_image.h
+-- Installing: /opt/rocm/llvm/include/hsa/amd_hsa_queue.h
+-- Installing: /opt/rocm/llvm/lib/cmake/hsa-runtime64/hsa-runtime64Targets.cmake
+-- Installing: /opt/rocm/llvm/lib/cmake/hsa-runtime64/hsa-runtime64Targets-noconfig.cmake
+-- Installing: /opt/rocm/llvm/lib/cmake/hsa-runtime64/hsa-runtime64-config.cmake
+-- Installing: /opt/rocm/llvm/lib/cmake/hsa-runtime64/hsa-runtime64-config-version.cmake
+-- Installing: /opt/rocm/llvm/lib/cmake/hsa-runtime64/FindLibElf.cmake
+-- Installing: /opt/rocm/llvm/lib/cmake/hsa-runtime64/COPYING-CMAKE-SCRIPTS
+-- Installing: /opt/rocm/llvm/lib/cmake/hsa-runtime64/hsacore.so.link
+```
+
+How llama fails to build: rusticl needs FP16 and "subgroup broadcast"? Subgroups are supposed to be SIMD.
+
+```bash
+bool llama_supports_gpu_offload(void) {
+    return ggml_backend_dev_by_type(GGML_BACKEND_DEVICE_TYPE_GPU) != nullptr ||
+           llama_supports_rpc();
+}
+
+
+ggml_opencl: selecting platform: 'rusticl'
+ggml_opencl: selecting device: 'AMD Radeon Graphics (radeonsi, gfx1013, LLVM 18.1.3, DRM 3.61, 6.14.0-rc4)'
+ggml_opencl: warning, not a GPU: 'AMD Radeon Graphics (radeonsi, gfx1013, LLVM 18.1.3, DRM 3.61, 6.14.0-rc4)'.
+ggml_opencl: device OpenCL version: OpenCL 3.0
+ggml_opencl: OpenCL driver: 25.1.0-devel (git-be4ca2bace)
+ggml_opencl: vector subgroup broadcast support: false
+ggml_opencl: device FP16 support: false
+ggml_opencl: device does not support FP16
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+build: 4799 (f0093ba3) with cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0 for x86_64-linux-gnu
+main: llama backend init
+```
