@@ -218,3 +218,9 @@ On the surface, the CMP 100-210 looks like it might make a cheap V100. The fact 
 * <https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-gen-assembly.html>
 * <https://community.intel.com/t5/GPU-Compute-Software/What-does-quot-Compacted-quot-meaning-in-GEN-ASM/m-p/1269839#M95%3Fwapkw=%223d%20media%20gpgpu%22>
 * <https://www.intel.com/content/www/us/en/content-details/703063/volume-9-programmer-s-reference-manual-render-engine.html?wapkw=%223d%20media%20gpgpu%22>
+
+* BUYING WEIRD THINGS FRM CHINA
+  * <https://www.reddit.com/r/QualityReps/comments/mtznu0/guide_how_to_use_xianyu_taobaos_secondhand_market/>
+  * V100 <https://2.taobao.com/search?word=v100&spm=a2170.xianyu_tbpc_search.0.0>
+  * SXM2 <https://2.taobao.com/item-detail?itemId=873365082021&spm=a2170.xianyu_tbpc_search.0.0>
+  * Xeon Phi <https://2.taobao.com/item-detail?itemId=882442612921&spm=a2170.xianyu_tbpc_search.0.0>

@@ -17,3 +17,10 @@ I briefly used Hugo
 . Before that, and for a number of projects (<https://ludumdare.com>, .
 
 To be honest, I don't necessarily like the way [Hugo](https://gohugo.io) does things. To Hugo's credit it is extremely flexible, but [Zola](https://getzola.org).
+
+
+## UNSORTED
+
+* <https://xyproto.github.io/splash/docs/longer/all.html>
+* <https://css-tricks.com/dark-modes-with-css/>
+* <https://michelf.ca/projects/php-markdown/extra/#fn-output>
