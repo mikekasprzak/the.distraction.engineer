@@ -122,6 +122,11 @@ Goal should be to make a single 2x node cluster. Custom 3D printed case with 500
 * How to reconfig it with 4 GB RAM, 12 GB VRAM <https://www.reddit.com/r/LocalLLaMA/comments/1h8el9m/metallama318binstructq8_0gguf_2689_toks_for_20/>
 * Lowers the idle wattage <https://gitlab.com/TuxThePenguin0/oberon-governor>
   * I forget where, but I think it was suggested somewhere that some of the current Linux Kernel work helped idle wattage more.
+* Motherboard Chipset Tech Docs <https://ftp.kolibrios.org/users/art_zh/doc/public/A50_Data.pdf>
+* <https://en.wikipedia.org/wiki/List_of_AMD_chipsets#Fusion_controller_hubs_(FCH)>
+* <https://gitlab.com/TuxThePenguin0/bc250-bios/-/blob/main/CHIPSETMENU.md>
+* <https://github.com/mothenjoyer69/bc250-documentation>
+* <https://github.com/mikekasprzak/bc250/blob/main/README.md>
 
 #### Details
 
@@ -201,3 +206,15 @@ On the surface, the CMP 100-210 looks like it might make a cheap V100. The fact 
 ## Architecture
 
 * <https://images.nvidia.com/aem-dam/Solutions/geforce/ada/nvidia-ada-gpu-architecture.pdf>
+
+
+## UNSORTED
+
+* <https://www.intel.com/content/www/us/en/docs/graphics-for-linux/developer-reference/1-0/overview.html>
+* <https://www.intel.com/content/www/us/en/content-details/689944/programmers-reference-manual-3d-media-gpgpu.html?wapkw=%22volume%207%22>
+* <https://www.intel.com/content/www/us/en/content-details/682690/2020-discrete-gpu-formerly-named-dg1-programmer-s-reference-manual-memory-cache.html?wapkw=%22volume%207%22>
+* <https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-gen-assembly.html?wapkw=%22volume%207%22>
+* <https://www.intel.com/content/www/us/en/docs/graphics-for-linux/developer-reference/1-0/hardware-specs.html>
+* <https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-gen-assembly.html>
+* <https://community.intel.com/t5/GPU-Compute-Software/What-does-quot-Compacted-quot-meaning-in-GEN-ASM/m-p/1269839#M95%3Fwapkw=%223d%20media%20gpgpu%22>
+* <https://www.intel.com/content/www/us/en/content-details/703063/volume-9-programmer-s-reference-manual-render-engine.html?wapkw=%223d%20media%20gpgpu%22>
