@@ -9,5 +9,11 @@
     },
     "build": {
       "command": "hugo --gc --minify"
-    }
+    },
+    "routes": [
+        {
+            "pattern": "the.distraction.engineer",
+            "custom_domain": true
+        }
+    ]
 }
