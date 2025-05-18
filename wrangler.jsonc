@@ -5,7 +5,7 @@
     "assets": {
         "directory": "./public",
         //"not_found_handling": "404-page",
-        "binding": "ASSETS"
+        //"binding": "ASSETS"
     },
     "build": {
       "command": "hugo --gc --minify"
