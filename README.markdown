@@ -13,7 +13,7 @@ My Blog. Build with Hugo, it's hosted on CloudFlare Workers (not pages).
 
 ```bash
 # Example curl snippe to get the latest linux binary and put it in the path. May require restarting terminal.
-curl -L https://github.com/gohugoio/hugo/releases/download/v0.147.3/hugo_0.147.3_linux-amd64.tar.gz | tar zxf - -C /usr/local/bin/
+VERSION=0.147.3 && curl -L https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_linux-amd64.tar.gz | tar zxf - -C /usr/local/bin/
 ```
 
 Tangent: Some chatter on how to make GitHub compatible URLs that automatically download the latest version is here: <https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8>. Using `latest` instead of the git tag gets you the correct tag, but doesn't help you if the filename contains a dynamic version number.
