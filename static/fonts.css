@@ -1,12 +1,12 @@
 /* text */
 @font-face {
     font-family: "Newsreader";
-    src: url("Newsreader.woff2") format("woff2-variations");
+    src: url("/font/Newsreader.woff2") format("woff2-variations");
     font-weight: 200 800;
 }
 @font-face {
     font-family: "Newsreader";
-    src: url("Newsreader-Italic.woff2") format("woff2-variations");
+    src: url("/font/Newsreader-Italic.woff2") format("woff2-variations");
     font-style: italic;
     font-weight: 200 800;
 }
@@ -14,26 +14,26 @@
 /* headings */
 @font-face {
     font-family: "Fredericka the Great";
-    src: url("FrederickatheGreat-Regular.woff2") format("woff2");
+    src: url("/font/FrederickatheGreat-Regular.woff2") format("woff2");
     font-weight: 400;
 }
 
 /* logo */
 @font-face {
     font-family: "Kode Mono";
-    src: url("KodeMono.woff2") format("woff2-variations");
+    src: url("/font/KodeMono.woff2") format("woff2-variations");
     font-weight: 400 700;
 }
 
 /* code */
 @font-face {
     font-family: "Source Code Pro";
-    src: url("SourceCodePro.woff2") format("woff2-variations");
+    src: url("/font/SourceCodePro.woff2") format("woff2-variations");
     font-weight: 200 900;
 }
 @font-face {
     font-family: "Source Code Pro";
-    src: url("SourceCodePro-Italic.woff2") format("woff2-variations");
+    src: url("/font/SourceCodePro-Italic.woff2") format("woff2-variations");
     font-style: italic;
     font-weight: 200 900;
 }

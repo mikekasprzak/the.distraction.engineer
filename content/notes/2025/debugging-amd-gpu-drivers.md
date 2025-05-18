@@ -147,6 +147,30 @@ Miners were apparently able to work around the compute problems, and even squeez
   * Until I see otherwise, I think this is the compute kernel used by hipMemcpy [__amd_rocclr_fillBufferAligned](https://github.com/ROCm/clr/blob/0558a8cd8af8ae9d93f4e47359578b573bce7c14/rocclr/device/blitcl.cpp#L52)
     * [rocBlit?](https://github.com/ROCm/clr/blob/3ec1d2d2f1154b75806612fce06b15293ee59e00/rocclr/device/rocm/rocblit.hpp#L606)
     * [palBlit?](https://github.com/ROCm/clr/blob/3ec1d2d2f1154b75806612fce06b15293ee59e00/rocclr/device/pal/palblit.hpp#L547)
+  * :fire: OpenCL is is failing to allocate over 2GB of memory because it reaches this point: <https://github.com/ROCm/clr/blob/3ec1d2d2f1154b75806612fce06b15293ee59e00/rocclr/device/rocm/rocdevice.cpp#L1280>
+    * They never actually query the GPU for memory, they just assume it doesn't have any
+    * It would have worked properly if this succeeded: <https://github.com/ROCm/clr/blob/3ec1d2d2f1154b75806612fce06b15293ee59e00/rocclr/device/rocm/rocdevice.cpp#L1236>
+      * `settings().enableLocalMemory_` should be true, as `settings` should return the `roc::Settings` singleton, which defaults to true.
+      * Therefor `gpuvm_segment_.handle` is somehow to blame. Did we not get a handle?
+      * The [code here](https://github.com/ROCm/clr/blob/3ec1d2d2f1154b75806612fce06b15293ee59e00/rocclr/device/rocm/rocdevice.cpp#L1172) suggests it might fail to get a handle if it doesn't support "info access", which may be true, as it's an APU. Therefor the logic should be changed.
+        * `hsa_amd_agent_memory_pool_get_info`
+        * `HSA_AMD_AGENT_MEMORY_POOL_INFO_ACCESS = 0` <------ this is the property that is checked
+        * `HSA_AMD_AGENT_MEMORY_POOL_INFO_NUM_LINK_HOPS = 1`
+        * `HSA_AMD_AGENT_MEMORY_POOL_INFO_LINK_INFO = 2`
+        * NOTE: The same property is [checked here](https://github.com/ROCm/clr/blob/3ec1d2d2f1154b75806612fce06b15293ee59e00/rocclr/device/rocm/rocdevice.cpp#L859) to figure out if BAR is supported.
+          * `HSA_AMD_MEMORY_POOL_ACCESS_NEVER_ALLOWED = 0` used to know if we don't support large bar
+          * `HSA_AMD_MEMORY_POOL_ACCESS_ALLOWED_BY_DEFAULT = 1` <-- yes
+          * `HSA_AMD_MEMORY_POOL_ACCESS_DISALLOWED_BY_DEFAULT = 2` <-- no, but it could be allowed
+      * Via [`MemoryRegion::GetAccessInfo(agent, link)`](https://github.com/ROCm/ROCR-Runtime/blob/amd-staging/runtime/hsa-runtime/core/runtime/amd_memory_region.cpp#L381), the memory pool will only be allowed if it's owned by the agent, OR if the heap is a system heap AND agent is a CPU.
+        * `HSA_AMD_MEMORY_POOL_ACCESS_ALLOWED_BY_DEFAULT`
+        * HeapType == `HSA_HEAPTYPE_SYSTEM` or `HSA_HEAPTYPE_DEVICE_SVM` <-- IsSystem()
+        * HeapType == `HSA_HEAPTYPE_FRAME_BUFFER_PRIVATE` or `HSA_HEAPTYPE_FRAME_BUFFER_PUBLIC` <-- IsLocalMemory()
+      * Via `MemoryRegion::GetAgentPoolInfo(agent, attribute, *out_value)`
+        * if attribute is `HSA_AMD_AGENT_MEMORY_POOL_INFO_ACCESS`, out_value will come from `GetAccessInfo(...)`
+        * other options don't matter to us
+      * Via `hsa_amd_agent_memory_pool_get_info(agent, pool, attribute, *out_value)`
+        * returns an `HSA_AMD_MEMORY_POOL_ACCESS_` flag via a call to `MemoryRegion::GetAgentPoolInfo(...)`
+      * Nah, this seems good. The Memory resered by the driver must actually be incorrectly flagged or allocated.
 * [ERRNO errors](https://en.cppreference.com/w/cpp/error/errno_macros) as text
 * [__cxa_finalie](https://refspecs.linuxbase.org/LSB_3.2.0/LSB-Core-generic/LSB-Core-generic/baselib---cxa_finalize.html) where atexit and destructors are called on program exit
 * `fflush(stdout);` to forcefully flush printf

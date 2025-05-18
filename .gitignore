@@ -2,6 +2,7 @@
 *.lock
 
 .woff2
+**/node_modules
 
 # Hugo
 public/
