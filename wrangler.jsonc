@@ -1,0 +1,16 @@
+{
+    "name": "the-distraction-engineer",
+    "compatibility_date": "2025-05-01",
+    "main": "./public/_worker.js",
+    "assets": {
+        "directory": "./public",
+        //"not_found_handling": "404-page",
+        "binding": "ASSETS"
+    },
+    "build": {
+      "command": "hugo --gc --minify"
+    },
+    "dev": {
+      "command": "hugo server --bind 0.0.0.0 --baseURL http://localhost:8788 --appendPort=false --disableFastRender"
+    }
+}
