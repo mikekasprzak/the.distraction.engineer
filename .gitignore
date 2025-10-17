@@ -6,3 +6,6 @@
 
 # Hugo
 public/
+
+# Wrangler
+dist/
