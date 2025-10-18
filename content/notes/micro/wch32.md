@@ -1,21 +1,36 @@
 +++
-title = "WCH Microcontrollers"
+title = "WCH RISC-V Microcontrollers"
 +++
+
+## Noteworthy chips (IMO)
+| Chip     | Arch |  Speed |  SRAM | Flash | Power | Notes                       |
+| -------- | ---- | ------ | ----- | ----- | ----- | --------------------------- |
+| CH32V003 |  V2A |  48MHz |   2KB |  16KB |    ?? |                             |
+| CH32V002 |  V2C |  48MHz |   4KB |  16KB |  2-5V | Pin compatible with V003    |
+| CH32V006 |  V2C |  48MHz |   8KB |  16KB |  2-5V |                             |
+| CH32V203 |  V4B | 144MHz |  20KB |  ??KB |  3.3V | No PMP, Slow DIV opcode     |
+| CH32V305 |  V4F | 144MHz |  32KB |  ??KB |  3.3V | FPU                         |
+| CH32V307 |  V4F | 144MHz |  64KB |  ??KB |  3.3V | FPU, Ethernet               |
+
+More here: <https://github.com/ch32-rs/ch32-data#Families>
+
 ## Useful Links
 * <https://github.com/ch32-rs/wchisp>
+  * <https://github.com/ch32-rs/ch32-data>
 * <https://github.com/basilhussain/ch32v003-bootloader-docs>
 * <https://probe.rs/>
 * <https://github.com/embassy-rs/embassy>
   * <https://github.com/ch32-rs/ch32-hal>
+* <https://www.felixrichter.tech/posts/rustriscvdebugging/>
 
 ## Flashing devices
-### Via WCH-LinkE
+### Via WCH-Link (Link, LinkE, LinkW)
 Use `probe-rs`.
 
 ### Via bootloader
-Use the [wchisp](https://github.com/ch32-rs/wchisp) tool.
+You can flash a device using the `wchisp` tool ([link](https://github.com/ch32-rs/wchisp)).
 
-NOTE: Uploading data via the booloader is slower than a WCH-LinkE. You also can't dump binaries using the bootloader. More information about CH32 bootloaders: <https://github.com/basilhussain/ch32v003-bootloader-docs>
+NOTE: Uploading data via the booloader is slower than a WCH-LinkE. Also, you can't dump binaries using the bootloader. More information [here](https://github.com/basilhussain/ch32v003-bootloader-docs).
 
 #### Installing wchisp
 NOTE: You should add udev rules first, otherwise you'll have to `sudo` to do anything with the devices.
@@ -35,15 +50,15 @@ sudo udevadm control --reload
 sudo udevadm trigger
 ```
 
-To install using Cargo:
+To install `wchisp` using Cargo:
 
 ```bash
 cargo install wchisp --git https://github.com/ch32-rs/wchisp
 ```
 
-Other methods can be found on the [wchisp](https://github.com/ch32-rs/wchisp) page.
+Other methods can be found on the `wchisp` [github page](https://github.com/ch32-rs/wchisp).
 
-#### Running wchipsp
+#### Running wchisp
 If the module has a `boot` button, hold it while the device powers on (by plugging it in or by pushing reset). You can confirm the device
 is in bootloadr mode with `lsusb`.
 
@@ -89,4 +104,4 @@ To flash:
 wchisp flash ./path/to/firmware.{bin,hex,elf}
 ```
 
-Again, more information can be found on the [wchisp](https://github.com/ch32-rs/wchisp) page.
+Again, more information can be found on the `wchisp` [github page](https://github.com/ch32-rs/wchisp).
