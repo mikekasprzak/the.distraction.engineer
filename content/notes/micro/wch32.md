@@ -24,10 +24,35 @@ More here: <https://github.com/ch32-rs/ch32-data#Families>
 * <https://www.felixrichter.tech/posts/rustriscvdebugging/>
 
 ## Flashing devices
-### Via WCH-Link (Link, LinkE, LinkW)
-Use `probe-rs`.
+### Via WCH-LinkE (Dongle with CH32V305)
+This is the method you want to program bare chips (or modules without a USB port and/or buttons).
 
-### Via bootloader
+Connect the `3.3V`, `GND`, `SDIO`, and optionally the `SDCLK` pins to the microcontroller (NOTE: chips with 16 pins or less don't have a `SDCLK` pin). These pins are typically found on the backside of the dongle.
+
+Then use [wlink](https://github.com/ch32-rs/wlink).
+
+```bash
+# list connected
+wlink status
+
+wlink flash myprogram.elf
+```
+
+**IMPORTANT**: Unless you're programming an older chip like the `CH32V2003`, your `WCH-LinkE` probably needs a firmware update. `wlink status` will report the current firmware version. Newer chips are supported by newer firmwares. At the time of this writing v2.18 is the current version, supporting the CH32V006 family of chips and the CH32V317.
+
+Until wlink adds firmware upgrade support, you can use a separate tool:
+
+<https://github.com/cjacker/wlink-iap>
+
+The latest firmwares can be found in the [WCH-LinkUtility](https://www.wch.cn/downloads/WCH-LinkUtility_ZIP.html) package provided by WCH. For the WCH-LinkE, you want `FIRMWARE_CH32V305.bin`.
+
+```bash
+wlink-iap -f ../Firmware_Link/FIRMWARE_CH32V305.bin
+```
+
+The `wlink-iap` tool will automatically switch to IAP mode, so upgrading firmwares only requires that you do the above.
+
+### Via bootloader (ISP/IAP)
 You can flash a device using the `wchisp` tool ([link](https://github.com/ch32-rs/wchisp)).
 
 NOTE: Uploading data via the booloader is slower than a WCH-LinkE. Also, you can't dump binaries using the bootloader. More information [here](https://github.com/basilhussain/ch32v003-bootloader-docs).
@@ -105,3 +130,17 @@ wchisp flash ./path/to/firmware.{bin,hex,elf}
 ```
 
 Again, more information can be found on the `wchisp` [github page](https://github.com/ch32-rs/wchisp).
+
+### Via probe-rs
+??
+
+Need to see if this is even Useful
+
+## Creating a binary
+Start with this.
+
+<https://github.com/cjacker/ch32v_evt_makefile_gcc_project_template>
+
+It provides a simple script for generating a basic project (NOTE: when I tried it, it was a broken blinky app).
+
+Depending on your chip, this sample project will need to be changed to use an available PIN. The default is D0, which the CH32V002 does not have, so I made mine use D4. Take note of the init code that sets the pin to PP mode (push-pull).
