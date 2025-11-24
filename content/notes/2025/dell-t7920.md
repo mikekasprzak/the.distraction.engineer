@@ -1,5 +1,6 @@
 +++
-
+title = "Dell T7920"
+draft = true
 +++
 
 

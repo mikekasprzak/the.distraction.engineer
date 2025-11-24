@@ -2,6 +2,7 @@
 title = "Better HTTP API versioning with VX Versioning"
 date = "2025-02-13T18:13:00.308Z"
 summary = "hey I'm cool"
+draft = true
 +++
 
 Summary?

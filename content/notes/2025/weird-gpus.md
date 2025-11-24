@@ -1,6 +1,7 @@
 +++
 title = "Weird GPUs"
 date = "2025-02-17T18:02:06.119Z"
+draft = true
 summary = "This notebook collect information about atypical GPUs, and how they compare to more widely available consumer GPUs, with a focus on compute"
 keywords = [ ]
 tags = [ "amd", "cuda", "intel", "nvidia", "opencl", "rocm", "sycl" ]
