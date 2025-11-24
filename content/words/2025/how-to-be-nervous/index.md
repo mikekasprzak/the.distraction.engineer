@@ -30,7 +30,9 @@ It's not that I can't write confidently, it's that sometimes I don't believe it.
 
 I hate this.
 
-I don't hate that I'm not confident, but I hate that being indecisive isn't okay. Confidence builds trust; It gives comfort, and everyone wants comfort. While I don't thrive in indecision, I'm not uncomfortable in it. Call this a personal AuDHD'ism, but it's not enough for me to be told something is true to believe it; I need to see it or prove it myself to be truly satisfied. By conventional standards I could be considered an expert on many subjects, but to me I just have a larger foundation. I worry, sometimes dread, about what that foundation is built upon. But the social expectation is that I must exude confidence, and I understand why, as I too haven't come up with a better way to make others comfortable.
+I don't hate that I'm not confident, but I hate that being indecisive isn't okay. Confidence builds trust; It gives comfort, and everyone wants comfort. While I don't thrive in indecision, I'm not uncomfortable in it. Call this a personal AuDHD'ism, but it's not enough for me to be told something is true to believe it; I need to see it or prove it myself to be truly satisfied.
+
+By conventional standards I could be considered an expert on many subjects, but to me I just have a larger foundation. I worry, sometimes dread, about what that foundation is built upon. But the social expectation is that I must exude confidence, and I understand why, as I too haven't come up with a better way to make others comfortable.
 
 I hate this social norm. I hate this normalized lying.
 
